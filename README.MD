@@ -5,7 +5,7 @@
 
 1. [client] posts a JSON query to server `search` as a request.
 2. [server] receives client's request, sends a JSON back to the client: `{'message': 'Processing...', 'id':"UUID"}`, stores this JSON to `UUID.json`, and calls the main part function through thread.
-3. [client] posts a JSON query to `get_report` based on the ID from step2: `{"id":"UUID"}`,  to check if all tasks have been completed.
+3. [client] posts a JSON query to `get_report` based on the ID from step2: `{"id":"UUID"}`,  to check if all tasks have been completed. (use polling to check)
 4. [server] writes result JSON back to `UUID.json` if the job is finished.
 
 ## requirements
